@@ -3,6 +3,8 @@
 #include <cstdlib>
 #include <new>
 
+namespace singleton {
+
 template <typename T>
 class MallocMemoryPolicy {
 public:
@@ -27,3 +29,5 @@ public:
         free(p);
     }
 };
+
+} // namespace singleton

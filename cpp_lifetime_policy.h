@@ -3,6 +3,8 @@
 #include <stdexcept>
 #include <cstdlib>
 
+namespace singleton {
+
 template <typename T>
 class CppLifetimePolicy {
 public:
@@ -16,3 +18,5 @@ public:
         }
     }
 };
+
+} // namespace singleton

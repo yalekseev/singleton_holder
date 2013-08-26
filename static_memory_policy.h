@@ -1,5 +1,7 @@
 #pragma once
 
+namespace singleton {
+
 template <typename T>
 class StaticMemoryPolicy {
 public:
@@ -17,3 +19,5 @@ private:
 
 template <typename T>
 char StaticMemoryPolicy<T>::m_chunk[sizeof(T)];
+
+} // namespace singleton

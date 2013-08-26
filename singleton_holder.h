@@ -1,16 +1,16 @@
 #pragma once
 
 #include "new_memory_policy.h"
-#include "malloc_memory_policy.h"
-#include "static_memory_policy.h"
 
 #include "cpp_lifetime_policy.h"
 
 #include <cassert>
 
+namespace singleton {
+
 template <
     typename T,
-    template <class> class MP = StaticMemoryPolicy,
+    template <class> class MP = NewMemoryPolicy,
     template <class> class LP = CppLifetimePolicy>
 class SingletonHolder {
 public:
@@ -57,3 +57,5 @@ bool SingletonHolder<T, MP, LP>::m_destroyed(false);
 
 template <typename T, template <class> class MP, template <class> class LP>
 T * SingletonHolder<T, MP, LP>::m_instance(0);
+
+} // namespace singleton

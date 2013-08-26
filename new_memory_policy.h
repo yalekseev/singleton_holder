@@ -1,5 +1,7 @@
 #pragma once
 
+namespace singleton {
+
 template <typename T>
 class NewMemoryPolicy {
 public:
@@ -11,3 +13,5 @@ public:
         delete p;
     }
 };
+
+} // namespace singleton
