@@ -23,7 +23,9 @@ public:
 typedef singleton::SingletonHolder<MyClass, singleton::StaticMemoryPolicy, singleton::ImmortalLifetimePolicy> MySingleton;
 
 int main() {
-    MySingleton::instance().print();
+    MyClass & obj = MySingleton::instance();
+
+    obj.print();
 
     return 0;
 }
