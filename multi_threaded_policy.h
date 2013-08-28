@@ -2,6 +2,8 @@
 
 #include <mutex>
 
+namespace singleton {
+
 template <typename T>
 class MultiThreadedPolicy {
 private:
@@ -25,3 +27,5 @@ public:
 
 template <typename T>
 std::mutex MultiThreadedPolicy<T>::PrivateLock::m_mutex;
+
+} // namespace singleton

@@ -36,7 +36,7 @@ T & SingletonHolder<T, MP, LP, TP>::instance() {
             }
 
             m_instance = MP<T>::create();
-            LP<T>::schedule_destruction(&SingletonHolder<T, MP, LP>::destroy);
+            LP<T>::schedule_destruction(&SingletonHolder<T, MP, LP, TP>::destroy);
         }
     }
 
