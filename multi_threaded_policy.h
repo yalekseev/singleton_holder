@@ -2,8 +2,6 @@
 
 #include <mutex>
 
-#include <iostream>
-
 template <typename T>
 class MultiThreadedPolicy {
 private:
@@ -17,6 +15,7 @@ private:
             m_mutex.unlock();
         }
 
+    private:
         static std::mutex m_mutex;
     };
 
